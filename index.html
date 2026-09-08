@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sign Up</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef1fb;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+
+  .card {
+    background: #fff;
+    width: 400px;
+    max-width: 90%;
+    padding: 32px;
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(30, 41, 90, 0.08);
+  }
+
+  .toggle {
+    display: flex;
+    background: #dfe4f7;
+    border-radius: 999px;
+    padding: 4px;
+    margin-bottom: 28px;
+  }
+
+  .toggle button {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px 0;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #4b5299;
+    transition: all 0.2s ease;
+  }
+
+  .toggle button.active {
+    background: linear-gradient(135deg, #2b2f8f, #3742b8);
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin: 0 0 6px;
+    color: #14162b;
+  }
+
+  .subtitle {
+    color: #7a7f9a;
+    font-size: 14px;
+    margin: 0 0 24px;
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1c33;
+    margin-bottom: 8px;
+  }
+
+  .field {
+    margin-bottom: 18px;
+  }
+
+  input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid #e4e6f2;
+    background: #fafbff;
+    font-size: 14px;
+    color: #33364d;
+    outline: none;
+  }
+
+  input::placeholder {
+    color: #a7abc3;
+  }
+
+  input:focus {
+    border-color: #3742b8;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #2b2f8f, #3742b8);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+
+  .submit-btn:hover {
+    opacity: 0.95;
+  }
+
+  .footer-text {
+    text-align: center;
+    font-size: 13px;
+    color: #7a7f9a;
+    margin-top: 20px;
+  }
+
+  .footer-text a {
+    color: #3742b8;
+    font-weight: 600;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="toggle">
+    <button type="button" id="loginBtn">Login</button>
+    <button type="button" id="signupBtn" class="active">Sign Up</button>
+  </div>
+
+  <h1>Create your account</h1>
+  <p class="subtitle">Join your batchmates and start your daily practice streak.</p>
+
+  <form id="signupForm">
+    <div class="field">
+      <label for="fullname">Full name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="xyz" required>
+    </div>
+
+    <div class="field">
+      <label for="email">College email</label>
+      <input type="email" id="email" name="email" placeholder="you@college.edu" required>
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="••••••••" required>
+    </div>
+
+    <button type="submit" class="submit-btn">Create account</button>
+  </form>
+
+  <p class="footer-text">Already have an account? <a href="#" id="loginLink">Login</a></p>
+</div>
+
+<script>
+  const loginBtn = document.getElementById('loginBtn');
+  const signupBtn = document.getElementById('signupBtn');
+
+  function goToLogin() {
+    signupBtn.classList.remove('active');
+    loginBtn.classList.add('active');
+  }
+
+  loginBtn.addEventListener('click', goToLogin);
+  document.getElementById('loginLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    goToLogin();
+  });
+
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Account created!');
+  });
+</script>
+
+</body>
+</html>
