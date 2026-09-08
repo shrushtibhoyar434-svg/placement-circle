@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | PlacementCircle</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="login-card" aria-labelledby="page-title">
+      <nav class="auth-tabs" aria-label="Account access">
+        <a class="auth-tab active" href="login.html" aria-current="page">Login</a>
+        <a class="auth-tab" href="signup.html">Sign Up</a>
+      </nav>
+
+      <div class="intro">
+        <h1 id="page-title">Welcome back</h1>
+        <p>Log in to continue your placement preparation.</p>
+      </div>
+
+      <form class="login-form" action="#" method="post">
+        <div class="field-group">
+          <label for="college-email">College email</label>
+          <input id="college-email" name="email" type="email" placeholder="you@college.edu" autocomplete="email" required>
+        </div>
+
+        <div class="field-group">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="........" autocomplete="current-password" required>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p class="signup-prompt">
+        New to <a href="signup.html">PlacementCircle</a>? <a href="signup.html">Sign up</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
