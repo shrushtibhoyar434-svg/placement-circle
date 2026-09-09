@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create your account — Placement Circle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="auth-shell">
+
+    <nav class="navbar">
+      <a href="../index.html" class="logo">
+        <span class="logo-mark"></span>
+        Placement <span class="accent">Circle</span>
+      </a>
+    </nav>
+
+    <div class="auth-body">
+      <div class="auth-copy">
+        <h1>Your <span class="grad-text">circle</span> is one<br />signup away.</h1>
+        <p>Join thousands of students building the placement habit.</p>
+        <p class="auth-footer-note">Practice. Track. Connect. Get placed.</p>
+      </div>
+
+      <div class="auth-card">
+        <h2>Create your account</h2>
+        <p class="sub">Use your college email — we'll send a 6-digit code.</p>
+
+        <form id="signup-form">
+          <div class="field">
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Your full name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">College email</label>
+            <input type="email" id="email" name="email" placeholder="you@college.edu" required />
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required minlength="8" />
+          </div>
+
+          <div class="field">
+            <label for="confirm-password">Confirm password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required minlength="8" />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </form>
+
+        <p class="switch-line">
+          Already have an account? <a href="login.html">Log in</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
